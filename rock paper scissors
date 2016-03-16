@@ -24,7 +24,8 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
 
     if action.lower().strip() != "rock" \
     and action.lower().strip() != "paper" \
-    and action.lower().strip() != "scissors":
+    and action.lower().strip() != "scissors"
+    and action.lower().strip() != "shotgun":
     # makes sure that all the answers that are inputed are valid
 
         print ("That was not a valid action")
@@ -55,6 +56,8 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
 
     else:
         ("You lose! faggot")
+        If action == "shotgun"
+            print ("Now the real challenge")
         play_again()
     #if its a loss by the user, it displays the result and gives the option to play again
 
