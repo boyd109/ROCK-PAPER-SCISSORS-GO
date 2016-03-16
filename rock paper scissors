@@ -1,31 +1,73 @@
 import random
 import sys
 import os
-def thr_game(action):
-    action = input("Rock, Paper or Scissors?")
-    if action.lower() != "rock" \
-    or action.lower() != "paper" \
-    or action.lower() != "scissors":
+
+def play_again(): # option to play again after the results
+    next_move = input("play again? Yes or no") #question given to user
+
+    if next_move == "y" or next_move == "ye" or next_move == "yes":
+    #all these answers are accepted as yes to play again
+        return thr_game()
+
+    elif next_move == "n" or next_move == "no":
+    #all these answers are accepted as no to not play again
+        print ("bye")
+
+    else:
+    #if the user makes a mistkae when inputing an answer
+        print ("bad answer")
+        return play_again() #to make it loop
+
+def thr_game(): #create a function that plays rock paper scissors against a random generator
+
+    action = input("Rock, Paper or Scissors?") #ask user for action
+
+    if action.lower().strip() != "rock" \
+    and action.lower().strip() != "paper" \
+    and action.lower().strip() != "scissors":
+    # makes sure that all the answers that are inputed are valid
+
         print ("That was not a valid action")
-        return thr_game
-    print ("You chose %s" % action)
+        return thr_game() #loops the game
+
+    else:
+        print ("You chose %s" % action) # displays the action of the user
+
     list_action = ["rock", "paper", "scissors"]
     rand_action = list_action[random.randrange(0,3)]
+    # what the user will be playing against, a random generator of any of the 3 options
+
     print ("Opponent chose %s" % rand_action)
+    #prints the opponents action
+
     if action == rand_action:
         print("It's a tie!")
+        play_again()
         return thr_game
-    elif (action = "rock" and rand_action = "scissors"):
-        print("You win!")
-        break
-    elif action = "paper" and rand_action = "rock":
-        print("You win!")
-        break
-    elif action = "scissors" and rand_action = "paper":
-        print("You win!")
-        break
+    #if its a tie, it displays the result and gives the option to play again
+
+    elif action == "rock" and rand_action == "scissors" \
+        or action == "paper" and rand_action == "rock" \
+        or action == "scissors" and rand_action == "paper":
+            print("You win!")
+            play_again()
+    # if its a win by the user, it displays the result and gives the option to play again
+
     else:
         ("You lose! faggot")
-        return thr_game
+        play_again()
+    #if its a loss by the user, it displays the result and gives the option to play again
 
-print thr_game
+thr_game() #calls the function
+
+
+
+
+
+
+
+
+
+
+
+
