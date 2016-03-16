@@ -1,31 +1,43 @@
 import random
 import sys
 import os
-def thr_game(action):
+
+def thr_game():
     action = input("Rock, Paper or Scissors?")
     if action.lower() != "rock" \
     or action.lower() != "paper" \
     or action.lower() != "scissors":
         print ("That was not a valid action")
-        return thr_game
+        return thr_game()
     print ("You chose %s" % action)
+
     list_action = ["rock", "paper", "scissors"]
     rand_action = list_action[random.randrange(0,3)]
+
     print ("Opponent chose %s" % rand_action)
     if action == rand_action:
         print("It's a tie!")
         return thr_game
-    elif (action = "rock" and rand_action = "scissors"):
+    elif action == "rock" and rand_action == "scissors":
         print("You win!")
-        break
-    elif action = "paper" and rand_action = "rock":
+    elif action == "paper" and rand_action == "rock":
         print("You win!")
-        break
-    elif action = "scissors" and rand_action = "paper":
+    elif action == "scissors" and rand_action == "paper":
         print("You win!")
-        break
     else:
         ("You lose! faggot")
         return thr_game
 
-print thr_game
+thr_game()
+
+
+
+
+
+
+
+
+
+
+
+
