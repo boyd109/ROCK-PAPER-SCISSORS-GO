@@ -17,6 +17,9 @@ def play_again(): # option to play again after the results
     #if the user makes a mistkae when inputing an answer
         print ("bad answer")
         return play_again() #to make it loop
+        
+def fun()
+    print "You found the surprise!"
 
 def thr_game(): #create a function that plays rock paper scissors against a random generator
 
@@ -58,6 +61,7 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
         ("You lose! faggot")
         If action == "shotgun"
             print ("Now the real challenge")
+            fun()
         play_again()
     #if its a loss by the user, it displays the result and gives the option to play again
 
