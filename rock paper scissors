@@ -60,7 +60,7 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
     else:
         ("You lose! faggot")
         if action == "shotgun":
-            print ("Opponent's  %s" explodes from your shotgun" % rand_action)
+            print ("The opponent's  %s explodes from your shotgun" % rand_action)
             print ("Now the real challenge")
             fun()
         play_again()
