@@ -18,8 +18,8 @@ def play_again(): # option to play again after the results
         print ("bad answer")
         return play_again() #to make it loop
         
-def fun()
-    print "You found the surprise!"
+def fun():
+    print ("You found the surprise!")
 
 def thr_game(): #create a function that plays rock paper scissors against a random generator
 
@@ -27,7 +27,7 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
 
     if action.lower().strip() != "rock" \
     and action.lower().strip() != "paper" \
-    and action.lower().strip() != "scissors"
+    and action.lower().strip() != "scissors" \
     and action.lower().strip() != "shotgun":
     # makes sure that all the answers that are inputed are valid
 
@@ -59,22 +59,14 @@ def thr_game(): #create a function that plays rock paper scissors against a rand
 
     else:
         ("You lose! faggot")
-        If action == "shotgun"
+        if action == "shotgun":
+            print ("Opponent's  %s" explodes from your shotgun" % rand_action)
             print ("Now the real challenge")
             fun()
         play_again()
     #if its a loss by the user, it displays the result and gives the option to play again
 
 thr_game() #calls the function
-
-
-
-
-
-
-
-
-
 
 
 
